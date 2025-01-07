@@ -15,6 +15,7 @@
   <url>http://www.3linebank.com</url>
   <modules>
     <module>accountService</module>
+    <module>transaction</module>
   </modules>
 
   <properties>
