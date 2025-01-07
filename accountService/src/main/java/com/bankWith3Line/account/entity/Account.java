@@ -20,7 +20,7 @@ public class Account extends BaseEntity {
     @Column(nullable = false)
     private Long customerId;
 
-    @Column(nullable = false, unique = true)
+    @Column(unique = true)
     private String accountNumber;
 
     @Column(nullable = false)

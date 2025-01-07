@@ -23,7 +23,7 @@ public class Transaction extends BaseEntity {
     private UUID transactionId;
 
     @Column(nullable = false)
-    private UUID accountId;
+    private Long accountId;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

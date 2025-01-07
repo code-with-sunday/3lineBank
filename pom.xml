@@ -17,6 +17,7 @@
     <module>accountService</module>
     <module>transactionService</module>
     <module>userManagementService</module>
+    <module>clients</module>
   </modules>
 
   <properties>
@@ -26,6 +27,7 @@
     <spring.boot.maven.plugin.version>2.5.7</spring.boot.maven.plugin.version>
     <spring.boot.dependencies.version>2.5.7</spring.boot.dependencies.version>
     <spring.cloud-version>2023.0.2</spring.cloud-version>
+    <springdoc.version>2.0.2</springdoc.version>
   </properties>
 
   <dependencyManagement>
@@ -53,6 +55,11 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+      <version>${springdoc.version}</version>
     </dependency>
 
     <dependency>
