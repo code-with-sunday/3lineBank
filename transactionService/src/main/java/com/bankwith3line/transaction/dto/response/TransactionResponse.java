@@ -15,7 +15,7 @@ import java.util.UUID;
 public class TransactionResponse {
 
     private UUID transactionId;
-    private UUID accountId;
+    private Long accountId;
     private TransactionType type;
     private BigDecimal amount;
     private LocalDateTime timestamp;

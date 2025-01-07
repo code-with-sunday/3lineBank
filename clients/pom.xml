@@ -6,23 +6,15 @@
         <artifactId>bankwith3line</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>accountService</artifactId>
-    <name>Archetype - accountService</name>
+    <artifactId>clients</artifactId>
+    <name>Archetype - clients</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
-
         <dependency>
-            <groupId>com.statment</groupId>
-            <artifactId>userManagementService</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.statment</groupId>
-            <artifactId>transactionService</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
     </dependencies>
+
 </project>
