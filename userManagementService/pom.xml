@@ -6,11 +6,12 @@
         <artifactId>bankwith3line</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>accountService</artifactId>
-    <name>Archetype - accountService</name>
+    <artifactId>userManagementService</artifactId>
+    <name>Archetype - userManagementService</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
+
 
     </dependencies>
 </project>

@@ -6,8 +6,8 @@
         <artifactId>bankwith3line</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>accountService</artifactId>
-    <name>Archetype - accountService</name>
+    <artifactId>transactionService</artifactId>
+    <name>Archetype - transaction</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
