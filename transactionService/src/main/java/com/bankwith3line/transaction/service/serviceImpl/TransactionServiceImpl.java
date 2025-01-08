@@ -1,7 +1,7 @@
 package com.bankwith3line.transaction.service.serviceImpl;
 
-import com.bankwith3line.transaction.dto.response.ApiResponse;
-import com.bankwith3line.transaction.dto.response.TransactionResponse;
+import com.bankwith3line.common.dto.response.ApiResponse;
+import com.bankwith3line.common.dto.response.TransactionResponse;
 import com.bankwith3line.transaction.entity.Transaction;
 import com.bankwith3line.transaction.enums.TransactionType;
 import com.bankwith3line.transaction.mapper.TransactionMapper;
@@ -20,7 +20,7 @@ public class TransactionServiceImpl implements TransactionService {
     private final TransactionMapper transactionMapper;
 
     @Override
-    public ApiResponse<TransactionResponse>  createTransaction(Long accountId, double amount) {
+    public ApiResponse<TransactionResponse> createTransaction(Long accountId, double amount) {
         Transaction transaction = new Transaction();
         transaction.setAccountId(accountId);
         transaction.setAmount(BigDecimal.valueOf(amount));

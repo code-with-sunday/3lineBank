@@ -1,7 +1,7 @@
 package com.bankwith3line.transaction.controller;
 
-import com.bankwith3line.transaction.dto.response.ApiResponse;
-import com.bankwith3line.transaction.dto.response.TransactionResponse;
+import com.bankwith3line.common.dto.response.ApiResponse;
+import com.bankwith3line.common.dto.response.TransactionResponse;
 import com.bankwith3line.transaction.service.TransactionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TransactionController {
     private final TransactionService transactionService;
 
-    @PostMapping
+    @PostMapping("/create")
     public ApiResponse<TransactionResponse> createTransaction(
             @RequestParam Long accountId,
             @RequestParam double amount) {
