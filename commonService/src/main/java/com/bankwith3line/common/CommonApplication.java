@@ -1,22 +1,17 @@
-package com.bankWith3Line.account;
+package com.bankwith3line.common;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
-
 
 @SpringBootApplication(
         scanBasePackages = {
-                "com.bankWith3Line.account"
+                "com.bankwith3line.common"
         }
 )
 @EnableDiscoveryClient
-//@EnableFeignClients(
-//        basePackages = "com.bankwith3line.clients"
-//)
-public class AccountApplication {
+public class CommonApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AccountApplication.class, args);
+        SpringApplication.run(CommonApplication.class, args);
     }
 }

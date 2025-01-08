@@ -13,7 +13,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class TransactionRequest {
 
-    private UUID accountId;
+    private Long accountId;
     private TransactionType type;
     private BigDecimal amount;
 }

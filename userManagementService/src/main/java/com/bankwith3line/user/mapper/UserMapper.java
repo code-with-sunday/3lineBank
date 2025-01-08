@@ -15,7 +15,7 @@ public class UserMapper {
 
         User user = new User();
         user.setFirstName(userRequest.getFirstName());
-        user.setLastName(userRequest.getLastName());
+        user.setSurname(userRequest.getSurname());
         user.setEmail(userRequest.getEmail());
         user.setPassword(userRequest.getPassword());
         user.setPhoneNumber(userRequest.getPhoneNumber());
@@ -31,7 +31,7 @@ public class UserMapper {
         return UserResponse.builder()
                 .id(user.getId())
                 .firstName(user.getFirstName())
-                .lastName(user.getLastName())
+                .username(user.getSurname())
                 .email(user.getEmail())
                 .phoneNumber(user.getPhoneNumber())
                 .address(user.getAddress())
