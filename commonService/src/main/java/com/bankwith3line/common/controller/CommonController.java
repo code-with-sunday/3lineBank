@@ -16,4 +16,6 @@ public class CommonController {
         return commonService.getUserInfo(email);
     }
 
+
+
 }

@@ -1,7 +1,7 @@
 package com.bankWith3Line.account.controller;
 
-import com.bankWith3Line.account.dto.response.ApiResponse;
 import com.bankWith3Line.account.service.AccountService;
+import com.bankwith3line.common.dto.response.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

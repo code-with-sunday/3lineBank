@@ -6,10 +6,10 @@ import com.bankWith3Line.account.enums.AccountStatus;
 import com.bankWith3Line.account.repository.AccountRepository;
 import com.bankWith3Line.account.service.AccountService;
 import com.bankWith3Line.account.utils.AccountNumberGenerator;
-import com.bankwith3line.transaction.service.TransactionService;
-import com.bankwith3line.user.entity.User;
+import com.bankwith3line.clients.transaction.TransactionClient;
+import com.bankwith3line.clients.user.GetUserClient;
+import com.bankwith3line.common.dto.response.UserResponse;
 import com.bankwith3line.user.exception.NotFoundException;
-import com.bankwith3line.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -19,15 +19,16 @@ import java.math.BigDecimal;
 @RequiredArgsConstructor
 public class AccountserviceImpl implements AccountService {
     private final AccountRepository accountRepository;
-    private final UserRepository userRepository;
     private final AccountNumberGenerator accountNumberGenerator;
-    private final TransactionService transactionService;
+    private final TransactionClient transactionClient;
+    private final GetUserClient getUserClient;
 
     @Override
-    public ApiResponse openCurrentAccount(Long customerId, double initialCredit) {
-        User user = userRepository.findById(customerId)
-                .orElseThrow(() -> new NotFoundException("User not found"));
-
+    public com.bankwith3line.common.dto.response.ApiResponse openCurrentAccount(Long customerId, double initialCredit) {
+        UserResponse userResponse = getUserClient.getUser(customerId).getData();
+        if (!userResponse.getId().equals(customerId)){
+            throw new RuntimeException("User not found");
+        }
         String accountNumber = generateUniqueAccountNumber();
 
         Account account = new Account();
@@ -39,15 +40,16 @@ public class AccountserviceImpl implements AccountService {
         accountRepository.save(account);
 
         if (initialCredit > 0) {
-            transactionService.createTransaction(account.getId(), initialCredit);
+            transactionClient.createTransaction(account.getId(), initialCredit);
             account.setBalance(BigDecimal.valueOf(initialCredit));
             accountRepository.save(account);
         }
 
         String message = String.format("Account %s opened for %s with initial credit of %.2f",
-                accountNumber, user.getFirstName(), initialCredit);
+                accountNumber, userResponse.getFirstName(), initialCredit);
 
         return new ApiResponse<>(true, "201", message, null);
+
     }
 
     @Override

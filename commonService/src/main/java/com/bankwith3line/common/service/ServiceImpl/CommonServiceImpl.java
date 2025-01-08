@@ -4,9 +4,7 @@ import com.bankWith3Line.account.entity.Account;
 import com.bankWith3Line.account.repository.AccountRepository;
 import com.bankwith3line.common.dto.request.TransactionSummary;
 import com.bankwith3line.common.dto.response.UserInfoResponse;
-import com.bankwith3line.common.entity.Common;
 import com.bankwith3line.common.exception.NotFoundException;
-import com.bankwith3line.common.repository.CommonRepository;
 import com.bankwith3line.common.service.CommonService;
 import com.bankwith3line.transaction.entity.Transaction;
 import com.bankwith3line.transaction.repository.TransactionRepository;
@@ -50,4 +48,7 @@ public class CommonServiceImpl implements CommonService {
 
         return userInfoResponse;
     }
+
+
+
 }

@@ -1,7 +1,7 @@
 package com.bankwith3line.transaction.mapper;
 
+import com.bankwith3line.common.dto.response.TransactionResponse;
 import com.bankwith3line.transaction.dto.request.TransactionRequest;
-import com.bankwith3line.transaction.dto.response.TransactionResponse;
 import com.bankwith3line.transaction.entity.Transaction;
 import org.springframework.stereotype.Component;
 
