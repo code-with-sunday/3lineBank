@@ -25,9 +25,15 @@ public class TransactionServiceImpl implements TransactionService {
         transaction.setAccountId(accountId);
         transaction.setAmount(BigDecimal.valueOf(amount));
         transaction.setType(TransactionType.CREDIT);
-        Transaction savedTransaction = transactionRepository.save(transaction);
         transaction.prePersist();
+        Transaction savedTransaction = transactionRepository.save(transaction);
         TransactionResponse response = transactionMapper.toResponse(savedTransaction);
         return new ApiResponse<>(true, "201", "Transaction Successful", response );
+    }
+
+    @Override
+    public ApiResponse<TransactionResponse> getUserTransactions(Long userId) {
+
+        return null;
     }
 }

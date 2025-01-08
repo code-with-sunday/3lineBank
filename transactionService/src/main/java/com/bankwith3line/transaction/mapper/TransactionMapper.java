@@ -19,7 +19,6 @@ public class TransactionMapper {
         return transaction;
     }
 
-
     public TransactionResponse toResponse(Transaction transaction) {
         if (transaction == null) {
             return null;

@@ -1,6 +1,5 @@
 package com.bankwith3line.user.dto.response;
 
-
 import lombok.*;
 
 @Getter
@@ -14,7 +13,7 @@ public class UserResponse {
 
     private String firstName;
 
-    private String lastName;
+    private String username;
 
     private String email;
 

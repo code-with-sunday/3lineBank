@@ -17,7 +17,7 @@ public class userController {
 
     private final UserService userService;
 
-    @PostMapping
+    @PostMapping("/")
     public ApiResponse<UserResponse> createUser(@RequestBody @Valid UserRequest userRequest) {
         return userService.createUser(userRequest);
     }
@@ -27,13 +27,9 @@ public class userController {
         return userService.getUser(id);
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public ApiResponse<List<UserResponse>> getAllUsers() {
         return userService.getAllUsers();
     }
 
-    @PostMapping("/{id}/account")
-    public ApiResponse<String> openCurrentAccount(@PathVariable Long id, @RequestParam double initialCredit) {
-        return userService.openCurrentAccount(id, initialCredit);
-    }
 }

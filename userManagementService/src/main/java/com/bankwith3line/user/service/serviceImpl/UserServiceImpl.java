@@ -57,16 +57,4 @@ public class UserServiceImpl implements UserService {
         return new ApiResponse<>(true, "200", "All users retrieved successfully", userResponses);
     }
 
-    @Override
-    public ApiResponse openCurrentAccount(Long customerId, double initialCredit) {
-        User user = userRepository.findById(customerId)
-                .orElseThrow(() -> new RuntimeException("User not found"));
-
-        String accountNumber = "ACC" + System.currentTimeMillis();
-
-        String message = String.format("Account %s opened for %s with initial credit of %.2f",
-                accountNumber, user.getFirstName(), initialCredit);
-
-        return new ApiResponse<>(true, "ACCOUNT_OPENED", message, null);
-    }
 }

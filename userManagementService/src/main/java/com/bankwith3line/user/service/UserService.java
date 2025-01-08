@@ -10,5 +10,4 @@ public interface UserService {
     ApiResponse<UserResponse> createUser(UserRequest userRequest);
     ApiResponse<UserResponse> getUser(Long userId);
     ApiResponse<List<UserResponse>> getAllUsers();
-    ApiResponse openCurrentAccount(Long customerId, double initialCredit);
 }

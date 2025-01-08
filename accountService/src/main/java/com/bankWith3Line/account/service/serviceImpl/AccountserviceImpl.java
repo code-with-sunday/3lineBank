@@ -35,6 +35,7 @@ public class AccountserviceImpl implements AccountService {
         account.setAccountNumber(accountNumber);
         account.setBalance(BigDecimal.ZERO);
         account.setStatus(AccountStatus.ACTIVE);
+        account.prePersist();
         accountRepository.save(account);
 
         if (initialCredit > 0) {
@@ -49,12 +50,22 @@ public class AccountserviceImpl implements AccountService {
         return new ApiResponse<>(true, "201", message, null);
     }
 
+    @Override
+    public BigDecimal getUserBalance(Long customerId) {
+        Account account = accountRepository.findByCustomerId(customerId)
+                .orElseThrow(() -> new NotFoundException("Account not found for customer"));
+
+        BigDecimal accountBalance = account.getBalance();
+
+        return accountBalance;
+    }
+
     private String generateUniqueAccountNumber() {
         String accountNumber;
         boolean exists;
         do {
             accountNumber = accountNumberGenerator.generateAccountNumber();
-            exists = userRepository.existsByAccountNumber(accountNumber);
+            exists = accountRepository.existsByAccountNumber(accountNumber);
         } while (exists);
 
         return accountNumber;
