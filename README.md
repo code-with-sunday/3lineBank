@@ -22,7 +22,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![BANK WITH 3 LINE ASSESSMENT](endpoint_swagger.png)
+![BANK WITH 3 LINE ASSESSMENT](eureka.png)
 
 [![SIMPLE BANK OPERATION USING SPRINGBOOT MICROSERVICE][SWAGGER-ENDPOINT-VIEW]](endpoint_swagger.png)
 
@@ -74,6 +74,7 @@ The **BankWith3Line** project implements a modern **microservices architecture**
 - **Lombok**
 - **Docker**
 - **Maven**
+- **Swagger**
 
 ---
 
@@ -82,13 +83,13 @@ The **BankWith3Line** project implements a modern **microservices architecture**
 The **BankWith3Line** system employs a microservices architecture, where each service is specialized for a specific domain. These services communicate through REST APIs, with service discovery facilitated by Eureka Server. OpenFeign simplifies inter-service communication.
 
 ### Ports and Service Mapping
-| Service                | Port  |
-|------------------------|-------|
-| User Management Service | 8080  |
-| Account Service         | 8081  |
-| Transaction Service     | 8082  |
-| API Gateway             | 8765  |
-| Eureka Discovery Server | 8761  |
+| Service                | Port |
+|------------------------|------|
+| User Management Service | 8080 |
+| Account Service         | 8081 |
+| Transaction Service     | 8082 |
+| API Gateway             | 8085 |
+| Eureka Discovery Server | 8761 |
 
 ![System Architecture](architecture_diagram.png)
 

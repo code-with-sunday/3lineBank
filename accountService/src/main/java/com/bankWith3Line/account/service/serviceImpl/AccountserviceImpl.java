@@ -7,6 +7,7 @@ import com.bankWith3Line.account.utils.AccountNumberGenerator;
 import com.bankwith3line.clients.transaction.TransactionClient;
 import com.bankwith3line.clients.user.GetUserClient;
 import com.bankwith3line.common.dto.response.ApiResponse;
+import com.bankwith3line.common.dto.response.TransactionResponse;
 import com.bankwith3line.common.dto.response.UserResponse;
 import com.bankwith3line.common.enums.AccountStatus;
 import com.bankwith3line.common.exception.NotFoundException;
@@ -14,6 +15,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
@@ -40,9 +42,13 @@ public class AccountserviceImpl implements AccountService {
         accountRepository.save(account);
 
         if (initialCredit > 0) {
-            transactionClient.createTransaction(account.getId(), initialCredit);
+            ApiResponse<TransactionResponse> transaction = transactionClient.createTransaction(account.getId(), initialCredit);
+            if(Objects.isNull(transaction.getData().getTransactionId())){
+                throw new RuntimeException("Transaction not found");
+            }
             account.setBalance(BigDecimal.valueOf(initialCredit));
             accountRepository.save(account);
+
         }
 
         String message = String.format("Account %s opened for %s with initial credit of %.2f",
