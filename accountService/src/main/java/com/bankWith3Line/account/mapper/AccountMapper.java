@@ -1,9 +1,9 @@
 package com.bankWith3Line.account.mapper;
 
-import com.bankWith3Line.account.dto.request.AccountRequest;
-import com.bankWith3Line.account.dto.response.AccountResponse;
 import com.bankWith3Line.account.entity.Account;
-import com.bankWith3Line.account.enums.AccountStatus;
+import com.bankwith3line.common.dto.request.AccountRequest;
+import com.bankwith3line.common.dto.response.AccountResponse;
+import com.bankwith3line.common.enums.AccountStatus;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;

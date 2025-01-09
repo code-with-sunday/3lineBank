@@ -1,6 +1,6 @@
 package com.bankwith3line.common.dto.request;
 
-import com.bankwith3line.transaction.enums.TransactionType;
+import com.bankwith3line.common.enums.TransactionType;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

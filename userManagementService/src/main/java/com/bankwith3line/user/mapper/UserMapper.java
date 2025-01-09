@@ -1,6 +1,7 @@
 package com.bankwith3line.user.mapper;
 
-import com.bankwith3line.user.dto.request.UserRequest;
+import com.bankwith3line.common.dto.request.UserRequest;
+import com.bankwith3line.common.dto.response.UserResponse;
 import com.bankwith3line.user.entity.User;
 import org.springframework.stereotype.Component;
 

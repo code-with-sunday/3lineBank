@@ -1,10 +1,10 @@
 package com.bankwith3line.user.service.serviceImpl;
 
+import com.bankwith3line.common.dto.request.UserRequest;
 import com.bankwith3line.common.dto.response.ApiResponse;
 import com.bankwith3line.common.dto.response.UserResponse;
-import com.bankwith3line.user.dto.request.UserRequest;
+import com.bankwith3line.common.exception.NotFoundException;
 import com.bankwith3line.user.entity.User;
-import com.bankwith3line.user.exception.NotFoundException;
 import com.bankwith3line.user.mapper.UserMapper;
 import com.bankwith3line.user.repository.UserRepository;
 import com.bankwith3line.user.service.UserService;
