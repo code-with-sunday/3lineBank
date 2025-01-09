@@ -1,24 +1,8 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
+    <inspection_tool class="RawUseOfParameterizedType" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="SpringComponentScan" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="SpringJavaInjectionPointsAutowiringInspection" enabled="false" level="ERROR" enabled_by_default="false" />
-    <inspection_tool class="VulnerableLibrariesLocal" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="isIgnoringEnabled" value="true" />
-      <option name="ignoredModules">
-        <list>
-          <option value="bankwith3line" />
-        </list>
-      </option>
-      <option name="ignoredPackages">
-        <list>
-          <option value="org.apache.tomcat.embed:tomcat-embed-core:10.1.24" />
-        </list>
-      </option>
-      <option name="ignoredReasons">
-        <list>
-          <option value="Not exploitable" />
-        </list>
-      </option>
-    </inspection_tool>
   </profile>
 </component>
