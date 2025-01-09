@@ -1,6 +1,6 @@
 package com.bankwith3line.transaction.entity;
 
-import com.bankwith3line.transaction.enums.TransactionType;
+import com.bankwith3line.common.enums.TransactionType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

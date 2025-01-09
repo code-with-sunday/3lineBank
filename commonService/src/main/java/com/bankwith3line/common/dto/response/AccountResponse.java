@@ -1,4 +1,4 @@
-package com.bankWith3Line.account.dto.response;
+package com.bankwith3line.common.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

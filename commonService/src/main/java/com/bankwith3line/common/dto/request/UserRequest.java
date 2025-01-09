@@ -1,4 +1,4 @@
-package com.bankwith3line.user.dto.request;
+package com.bankwith3line.common.dto.request;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

@@ -1,6 +1,6 @@
 package com.bankwith3line.common.dto.response;
 
-import com.bankwith3line.transaction.enums.TransactionType;
+import com.bankwith3line.common.enums.TransactionType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

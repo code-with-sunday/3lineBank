@@ -17,6 +17,10 @@ spring:
           uri: lb://transactionService
           predicates:
             - Path=/api/v1/transaction/**
+        - id: accountService
+          uri: lb://accountService
+          predicates:
+            - Path=/api/v1/account
     compatibility-verifier:
       enabled: false
 

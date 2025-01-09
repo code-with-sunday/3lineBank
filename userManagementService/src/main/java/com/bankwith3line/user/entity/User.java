@@ -1,6 +1,6 @@
 package com.bankwith3line.user.entity;
 
-import com.bankwith3line.user.enums.Role;
+import com.bankwith3line.common.enums.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

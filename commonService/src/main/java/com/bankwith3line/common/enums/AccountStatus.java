@@ -1,4 +1,4 @@
-package com.bankWith3Line.account.enums;
+package com.bankwith3line.common.enums;
 
 public enum AccountStatus {
     ACTIVE,

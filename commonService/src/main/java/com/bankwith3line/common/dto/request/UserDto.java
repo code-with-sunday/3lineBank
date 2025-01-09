@@ -1,4 +1,4 @@
-package com.bankWith3Line.account.dto.request;
+package com.bankwith3line.common.dto.request;
 
 import lombok.*;
 

@@ -1,15 +1,15 @@
 package com.bankWith3Line.account.service.serviceImpl;
 
-import com.bankWith3Line.account.dto.response.ApiResponse;
 import com.bankWith3Line.account.entity.Account;
-import com.bankWith3Line.account.enums.AccountStatus;
 import com.bankWith3Line.account.repository.AccountRepository;
 import com.bankWith3Line.account.service.AccountService;
 import com.bankWith3Line.account.utils.AccountNumberGenerator;
 import com.bankwith3line.clients.transaction.TransactionClient;
 import com.bankwith3line.clients.user.GetUserClient;
+import com.bankwith3line.common.dto.response.ApiResponse;
 import com.bankwith3line.common.dto.response.UserResponse;
-import com.bankwith3line.user.exception.NotFoundException;
+import com.bankwith3line.common.enums.AccountStatus;
+import com.bankwith3line.common.exception.NotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

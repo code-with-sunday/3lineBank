@@ -1,8 +1,8 @@
 package com.bankwith3line.user.controller;
 
+import com.bankwith3line.common.dto.request.UserRequest;
 import com.bankwith3line.common.dto.response.ApiResponse;
 import com.bankwith3line.common.dto.response.UserResponse;
-import com.bankwith3line.user.dto.request.UserRequest;
 import com.bankwith3line.user.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.bankwith3line.user.enums;
+package com.bankwith3line.common.enums;
 
 public enum Role {
     USER,

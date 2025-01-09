@@ -1,12 +1,11 @@
-package com.bankwith3line.transaction.dto.request;
+package com.bankwith3line.common.dto.request;
 
-import com.bankwith3line.transaction.enums.TransactionType;
+import com.bankwith3line.common.enums.TransactionType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-import java.util.UUID;
 
 @Data
 @NoArgsConstructor

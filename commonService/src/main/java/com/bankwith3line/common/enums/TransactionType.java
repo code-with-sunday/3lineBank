@@ -1,4 +1,4 @@
-package com.bankwith3line.transaction.enums;
+package com.bankwith3line.common.enums;
 
 public enum TransactionType {
     CREDIT,

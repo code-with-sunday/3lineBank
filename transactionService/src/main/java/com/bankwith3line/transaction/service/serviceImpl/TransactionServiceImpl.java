@@ -2,8 +2,8 @@ package com.bankwith3line.transaction.service.serviceImpl;
 
 import com.bankwith3line.common.dto.response.ApiResponse;
 import com.bankwith3line.common.dto.response.TransactionResponse;
+import com.bankwith3line.common.enums.TransactionType;
 import com.bankwith3line.transaction.entity.Transaction;
-import com.bankwith3line.transaction.enums.TransactionType;
 import com.bankwith3line.transaction.mapper.TransactionMapper;
 import com.bankwith3line.transaction.repository.TransactionRepository;
 import com.bankwith3line.transaction.service.TransactionService;

@@ -12,9 +12,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
         }
 )
 @EnableDiscoveryClient
-//@EnableFeignClients(
-//        basePackages = "com.bankwith3line.clients"
-//)
+@EnableFeignClients(
+        basePackages = "com.bankwith3line.clients"
+)
 public class AccountApplication {
     public static void main(String[] args) {
         SpringApplication.run(AccountApplication.class, args);

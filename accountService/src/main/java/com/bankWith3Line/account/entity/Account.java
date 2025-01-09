@@ -1,6 +1,6 @@
 package com.bankWith3Line.account.entity;
 
-import com.bankWith3Line.account.enums.AccountStatus;
+import com.bankwith3line.common.enums.AccountStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
